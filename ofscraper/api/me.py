@@ -61,7 +61,7 @@ def parse_user(profile):
 
 def print_user(name, username):
     with stdout.lowstdout():
-        console.print(f'Welcome, {name} | {username}')
+        console.print(f'Welcome,userid | username')
 @retry(stop=stop_after_attempt(constants.NUM_TRIES),wait=wait_random(min=constants.OF_MIN, max=constants.OF_MAX),reraise=True)   
 def parse_subscriber_count(headers):
     with httpx.Client(http2=True, headers=headers) as c:

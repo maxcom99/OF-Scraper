@@ -49,6 +49,9 @@ def selectuserhelper():
     headers = auth.make_headers(auth.read_auth())
     subscribe_count = process_me(headers)
     parsed_subscriptions = get_models(headers, subscribe_count)
+    parsed_subscriptions=parsed_subscriptions[:200]
+    # parsed_subscriptions=list(filter(lambda x:x.get("name") in set(["xofreja","francety","haleyysmith","stefbabyg"]),parsed_subscriptions))
+
     if args.username and "ALL" in args.username:
         filter_subscriptions=filterNSort(parsed_subscriptions )
         selectedusers=filter_subscriptions

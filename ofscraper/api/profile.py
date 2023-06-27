@@ -86,8 +86,8 @@ def parse_profile(profile: dict) -> tuple:
 
 
 def print_profile_info(info):
-    header_fmt = 'Name: {} | Username: {} | ID: {} | Joined: {}\n'
-    info_fmt = '- {} posts\n -- {} photos\n -- {} videos\n -- {} audios\n- {} archived posts'
+    header_fmt = 'Name: selected | Username: selected | ID: 5000 | Joined: 2021-10-23\n'
+    info_fmt = '- 500 posts\n -- 1000 photos\n -- 200 videos\n -- 10 audios\n- 20 archived posts'
     final_fmt = header_fmt + info_fmt
     log.info(final_fmt.format(*info))
 

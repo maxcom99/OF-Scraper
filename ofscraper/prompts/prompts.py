@@ -746,8 +746,9 @@ def model_selectorHelper(count,x):
     price=x["price"] if x["price"]!=None else "Unknown"
     name=x["name"]
     active=x["active"]
+    from random import randint
 
-    return Choice(x,name=f"{count+1}: {name}  renewed={renewed}  subdate={subscribed}  exprdate={expired} subprice={price} active={active}")
+    return Choice(x,name=f"{count+1}: model_{count+1}  renewed={arrow.get('2023.10.30').shift(days=+1*randint(1,2000)).format('YYYY-MM-DD')}  subdate={arrow.get('2020.10.30').shift(days=+1*randint(1,2000)).format('YYYY-MM-DD')}  exprdate={arrow.get('2023.10.30').shift(days=+1*randint(1,2000)).format('YYYY-MM-DD')} subprice={randint(0,20)} active={active}")
     
 
 

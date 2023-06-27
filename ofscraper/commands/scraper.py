@@ -169,6 +169,8 @@ def normal_post_process():
                 operations.create_tables(model_id,ele['name'])
                 operations.write_profile_table(model_id,ele['name'])
                 combined_urls=OF.process_areas( ele, model_id)
+                log.info("Downloads would start in actual program")
+                return
                 asyncio.run(download.process_dicts(
                 ele["name"],
                 model_id,
